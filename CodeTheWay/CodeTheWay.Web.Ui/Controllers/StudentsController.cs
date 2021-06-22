@@ -19,7 +19,47 @@ namespace CodeTheWay.Web.Ui.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await StudentService.GetStudents());
+        }
+        public async Task<IActionResult> Create()
+        {
+            return View(new Student());
+        }
+        [HttpPost]
+        public async Task<IActionResult> Register(Student model)
+        {
+            if (ModelState.IsValid)
+            {
+                var student = await StudentService.Create(model);
+                return RedirectToAction("Index");
+            }
+            return View(model);
+        }
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var student = await StudentService.GetStudent(id);
+            return View(student);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpDate(Student model)
+        {
+            if (ModelState.IsValid)
+            {
+                var student = await StudentService.Update(model);
+                return RedirectToAction("Index");
+            }
+            return View(model);
+        }
+        public async Task<IActionResult> Details(Guid id)
+        {
+            var student = await StudentService.GetStudent(id);
+            return View(student);
+        }
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var student = await StudentService.GetStudent(id);
+            await StudentService.Delete(student);
+            return RedirectToAction("Index");
         }
     }
 }
