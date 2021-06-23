@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodeTheWay.Web.Ui.Models
 {
-    public class HomeController : Controller
+    public class ShippingContainer : Controller
     {
         public IActionResult Index()
         {
