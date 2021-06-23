@@ -8,7 +8,7 @@ namespace CodeTheWay.Web.Ui.Services
 {
     public interface IShippingContainerService
     {
-        public Task<List<ShippingContainer>> GetShippingContainer();
+        public Task<List<ShippingContainer>> GetShippingContainers();
 
         public Task<ShippingContainer> GetShippingContainer(Guid id);
 

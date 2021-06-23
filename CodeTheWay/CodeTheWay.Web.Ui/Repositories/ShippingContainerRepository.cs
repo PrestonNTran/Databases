@@ -22,7 +22,7 @@ namespace CodeTheWay.Web.Ui.Repositories
 
             return result.Entity;
         }
-        public async Task<List<ShippingContainer>> GetShippingContainer()
+        public async Task<List<ShippingContainer>> GetShippingContainers()
         {
             return await this.AppDbContext.ShippingContainer.ToListAsync();
         }

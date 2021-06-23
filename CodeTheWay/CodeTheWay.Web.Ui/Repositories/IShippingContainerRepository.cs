@@ -9,7 +9,7 @@ namespace CodeTheWay.Web.Ui.Repositories
     {
         public Task<ShippingContainer> Create(ShippingContainer shipCon);
 
-        public Task<List<ShippingContainer>> GetShippingContainer();
+        public Task<List<ShippingContainer>> GetShippingContainers();
 
         public Task<ShippingContainer> GetShippingContainer(Guid Id);
 

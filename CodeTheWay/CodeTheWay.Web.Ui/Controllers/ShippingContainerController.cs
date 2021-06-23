@@ -17,9 +17,9 @@ namespace CodeTheWay.Web.Ui.Controllers
         {
             this.ShippingContainerService = shippingContainerService;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await ShippingContainerService.GetShippingContainers());
         }
         public async Task<IActionResult> Create()
         {

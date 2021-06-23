@@ -18,9 +18,9 @@ namespace CodeTheWay.Web.Ui.Services
         {
             return await this.ShippingContainerRepository.Create(shipCon);
         }
-        public async Task<List<ShippingContainer>> GetShippingContainer()
+        public async Task<List<ShippingContainer>> GetShippingContainers()
         {
-            return await this.ShippingContainerRepository.GetShippingContainer();
+            return await this.ShippingContainerRepository.GetShippingContainers();
         }
         public async Task<ShippingContainer> GetShippingContainer(Guid id)
         {
