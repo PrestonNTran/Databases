@@ -30,7 +30,7 @@ namespace CodeTheWay.Web.Ui.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ShippingContainers");
+                    b.ToTable("ShippingContainer");
                 });
 
             modelBuilder.Entity("CodeTheWay.Web.Ui.Models.Student", b =>
