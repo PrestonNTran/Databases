@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CodeTheWay.Web.Ui.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210623142327_ShippingContainer")]
+    [Migration("20210623160247_ShippingContainer")]
     partial class ShippingContainer
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

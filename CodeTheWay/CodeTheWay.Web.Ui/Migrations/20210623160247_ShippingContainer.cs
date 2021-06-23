@@ -7,15 +7,6 @@ namespace CodeTheWay.Web.Ui.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "FirstName",
-                table: "Students");
-
-            migrationBuilder.AddColumn<string>(
-                name: "FirstMidName",
-                table: "Students",
-                nullable: true);
-
             migrationBuilder.CreateTable(
                 name: "ShippingContainer",
                 columns: table => new
@@ -34,16 +25,6 @@ namespace CodeTheWay.Web.Ui.Migrations
         {
             migrationBuilder.DropTable(
                 name: "ShippingContainer");
-
-            migrationBuilder.DropColumn(
-                name: "FirstMidName",
-                table: "Students");
-
-            migrationBuilder.AddColumn<string>(
-                name: "FirstName",
-                table: "Students",
-                type: "TEXT",
-                nullable: true);
         }
     }
 }
