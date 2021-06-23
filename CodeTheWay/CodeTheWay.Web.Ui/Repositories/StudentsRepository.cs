@@ -11,11 +11,10 @@ namespace CodeTheWay.Web.Ui.Repositories
     {
         private AppDbContext AppDbContext;
 
-        public StudentsRepository(AppDbContext dbContext) 
+        public StudentsRepository(AppDbContext dbContext)
         {
             this.AppDbContext = dbContext;
         }
-
         public async Task<Student> Create(Student student)
         {
             var result = await this.AppDbContext.AddAsync(student);
@@ -23,12 +22,10 @@ namespace CodeTheWay.Web.Ui.Repositories
 
             return result.Entity;
         }
-
         public async Task<List<Student>> GetStudents()
         {
             return await this.AppDbContext.Students.ToListAsync();
         }
-
         public async Task<Student> GetStudent(Guid id)
         {
             return await AppDbContext.Students.FirstOrDefaultAsync(i => i.Id == id);
@@ -39,7 +36,6 @@ namespace CodeTheWay.Web.Ui.Repositories
             await AppDbContext.SaveChangesAsync();
             return result.Entity;
         }
-
         public async Task<Student> Delete(Student model)
         {
             AppDbContext.Students.Remove(model);
