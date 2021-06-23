@@ -1,16 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace CodeTheWay.Web.Ui.Models
 {
-    public class ShippingContainer : Controller
+    public class ShippingContainer
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public Guid Id { get; set; }
+        public int Weight { get; set; }
+        public string Destination { get; set; }
     }
 }
