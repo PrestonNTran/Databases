@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20210622194955_ShippingContainer.cs" />
+    <Compile Remove="Migrations\20210622194955_ShippingContainer.Designer.cs" />
+    <Compile Remove="Migrations\20210623142659_ShippingContainers.cs" />
+    <Compile Remove="Migrations\20210623142659_ShippingContainers.Designer.cs" />
+    <Compile Remove="Migrations\20210623142728_ShippingContainers.cs" />
+    <Compile Remove="Migrations\20210623142728_ShippingContainers.Designer.cs" />
+    <Compile Remove="Migrations\20210623151854_ShippingContainers.cs" />
+    <Compile Remove="Migrations\20210623151854_ShippingContainers.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="3.1.15" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.15" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.15" />
@@ -19,10 +30,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>

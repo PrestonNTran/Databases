@@ -3,14 +3,16 @@ using System;
 using CodeTheWay.Web.Ui.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CodeTheWay.Web.Ui.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210622195733_ShippingContainer")]
+    partial class ShippingContainer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,7 +32,7 @@ namespace CodeTheWay.Web.Ui.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ShippingContainers");
+                    b.ToTable("ShippingContainer");
                 });
 
             modelBuilder.Entity("CodeTheWay.Web.Ui.Models.Student", b =>
